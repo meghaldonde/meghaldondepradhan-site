@@ -89,35 +89,35 @@
   <div class="wrap">
     <div class="case-head">
       <p class="eyebrow">AI Product · Independently Created</p>
-      <h2>SignalCheck — A Trust Score for What You’re Reading</h2>
-      <p class="case-summary">A browser extension and API that combine domain reputation with AI-generated-content detection into a single, explainable trust score. Built end to end, outside of any employer.</p>
-      <dl class="pf-facts"><div class="pf-fact"><dt>Role</dt><dd>Product &middot; Design &middot; Builder</dd></div><div class="pf-fact"><dt>Context</dt><dd>Built end to end, outside of any employer</dd></div><div class="pf-fact"><dt>Status</dt><dd>Live on Chrome Web Store</dd></div></dl>
-      <ul class="case-meta"><li>Chrome Extension (MV3)</li><li>FastAPI</li><li>Google Safe Browsing</li><li>Gemini</li><li>Evaluation</li><li>Human review</li></ul>
-      <div class="btn-group"><a class="btn btn-primary" href="https://chromewebstore.google.com/detail/signalcheck-ai-trust-verification/nbamilppggmnmaeabjaogakdmigmcijg" rel="noopener" target="_blank">Install from Chrome Web Store <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-secondary" href="https://carpal-gum-931.notion.site/SignalCheck-AI-Digital-Provenance-Trust-Extension-3b9eb84ed72681aa90c6e5fe5e84801d" rel="noopener" target="_blank">Read the product thinking</a><a class="btn btn-secondary" href="https://github.com/meghaldonde/trustsignalcheck" rel="noopener" target="_blank">View the repository</a></div>
+      <h2>SignalCheck: Is This Review Worth Trusting?</h2>
+      <p class="case-summary">Highlight a review and SignalCheck quotes the phrases that make it read formulaic, and the ones that read first-hand. The site check is verified against Google Safe Browsing, the writing reading is a model estimate, and the two are shown separately so you know which is which. Built end to end.</p>
+      <dl class="pf-facts"><div class="pf-fact"><dt>Role</dt><dd>Product &middot; Design &middot; Builder</dd></div><div class="pf-fact"><dt>Context</dt><dd>Built end to end</dd></div><div class="pf-fact"><dt>Status</dt><dd>Live on Chrome Web Store</dd></div></dl>
+      <ul class="case-meta"><li>Chrome Extension (MV3)</li><li>FastAPI</li><li>Google Safe Browsing</li><li>Gemini</li><li>Selected-text scanning</li><li>Privacy by design</li></ul>
+      <div class="btn-group"><a class="btn btn-primary" href="https://chromewebstore.google.com/detail/signalcheck-ai-trust-verification/nbamilppggmnmaeabjaogakdmigmcijg" rel="noopener" target="_blank">Install from Chrome Web Store <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-secondary" href="https://trustsignalcheck.meghaldondepradhan.com" rel="noopener" target="_blank">Try the demo</a><a class="btn btn-secondary" href="https://carpal-gum-931.notion.site/SignalCheck-AI-Digital-Provenance-Trust-Extension-3b9eb84ed72681aa90c6e5fe5e84801d" rel="noopener" target="_blank">Read the product thinking</a><a class="btn btn-secondary" href="https://github.com/meghaldonde/trustsignalcheck" rel="noopener" target="_blank">View the repository</a></div>
     </div>
 
     <div class="case-body">
       <div class="case-block">
         <h3>The problem</h3>
-        <p>Domain reputation and AI-content detection answer different questions and live in different tools. A reader deciding whether to trust a page has to hold both in their head, and neither signal means much alone.</p>
+        <p>Reviews are where a shopper finds out what the product page will not say, and a lot of them now read the same way. Whether a machine wrote one is a dead end: a generated review can describe a real purchase, and a person can write three sentences that say nothing. The useful question is which phrases are doing the work.</p>
       </div>
       <div class="case-block">
         <h3>My role</h3>
-        <p>Product &middot; Design &middot; Builder. I framed the problem, designed the scoring model and system boundaries, and built it. Independent work, outside of any employer.</p>
+        <p>Product &middot; Design &middot; Builder. I framed the problem, designed the scoring model and system boundaries, and built it.</p>
       </div>
       <div class="case-block">
         <h3>What it does</h3>
-        <ul class="tight"><li>Manifest V3 Chrome extension with a FastAPI backend.</li><li>Fuses Google Safe Browsing reputation with Gemini AI-content detection into one 0–100 Signal Trust Score.</li><li>The score surfaces inline as the reader browses, with the contributing signals shown separately rather than hidden behind the number.</li><li>An admin view tracks scoring behavior across requests, which is how the weighting gets tuned.</li></ul>
+        <ul class="tight"><li>Manifest V3 Chrome extension with a FastAPI backend.</li><li>Highlight a review, a comment, or a paragraph and scan only that. Selections under 200 characters are declined rather than scored.</li><li>Returns the phrases behind the reading, quoted from the passage, so the reader can disagree with the same lines the model used.</li><li>Site safety and passage reading are labelled by how they were produced, one verified against Google Safe Browsing, one a model estimate.</li></ul>
       </div>
       <div class="case-block">
         <h3>What it deliberately does not do</h3>
-        <ul class="tight"><li>The score prompts a closer look. It is not a verdict, and it is not a moderation decision.</li><li>AI-content detection is probabilistic. It is never presented as proof of authorship.</li><li>Low-confidence results display as low-confidence rather than rounding to a clean number.</li><li>Where reputation and content signals disagree, the disagreement is shown rather than averaged away.</li></ul>
+        <ul class="tight"><li>The score prompts a closer look. It is not a verdict, and it is not a moderation decision.</li><li>AI-content detection is probabilistic. It is never presented as proof of authorship.</li><li>Low-confidence results display as low-confidence rather than rounding to a clean number.</li><li>On a highlighted passage no combined score is produced, because averaging a site safety flag with a passage reading gives a number that describes neither.</li></ul>
       </div>
     </div>
 
     <div class="case-outcome">
       <h3>Outcome</h3>
-      <p>A published Chrome extension and a public repository, plus a written account of how the score is composed and which judgments stay with the reader.</p>
+      <p>A published Chrome extension and a public repository, plus a written account of what the evaluation found, including the two defects it forced fixes for and the accuracy number that does not exist yet.</p>
     </div>
   </div>
 </section></main>
